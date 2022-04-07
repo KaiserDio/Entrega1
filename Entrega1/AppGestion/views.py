@@ -59,7 +59,8 @@ class ClienteLista(ListView):
 
 class ClienteCreacion(CreateView):
     model = Cliente
-    succes_url = '/cliente/lista'
+    success_url = '/cliente/lista'
+    template_name = 'AppGestion/cliente_creacion.html'
     fields = ['nombre', 'apellido', 'telefono', 'direccion']
 
 #Views VENDEDOR
@@ -69,5 +70,6 @@ class VendedorLista(ListView):
 
 class VendedorCreacion(CreateView):
     model = Vendedor
-    succes_url = "AppGestion/vendedor/lista"
-    fields = ['nombre', 'descripcion', 'precio', 'cantidad']
+    success_url = "/vendedor/lista"
+    template_name = 'AppGestion/vendedor_creacion.html'
+    fields = ['nombre', 'apellido', 'sueldo']

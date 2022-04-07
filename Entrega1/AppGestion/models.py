@@ -14,7 +14,7 @@ class Articulo(models.Model):
     
 class Cliente(models.Model):
     nombre=models.CharField(max_length=40)
-    apellido=models.IntegerField()
+    apellido=models.CharField(max_length=40)
     telefono=models.IntegerField()
     direccion=models.CharField(max_length=40)
 
@@ -24,7 +24,7 @@ class Cliente(models.Model):
 
 class Vendedor(models.Model):
     nombre=models.CharField(max_length=40)
-    apellido=models.IntegerField()
+    apellido=models.CharField(max_length=40)
     sueldo=models.IntegerField()
 
     def __str__(self):
