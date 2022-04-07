@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+
+{% extends 'appgestion/index.html' %}
+
+{% block main %}
+    
     <h1>Lista de Vendedores</h1>
     <ul>
         {% for vendedor in object_list %}
@@ -19,8 +15,7 @@
         {% endfor %}
 
     </ul>
-    
+
     <a href="{% url 'VendedorCreacion' %}">Nuevo</a>
-        
-</body>
-</html>
+
+{% endblock %}
